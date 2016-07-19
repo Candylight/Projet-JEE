@@ -1,0 +1,307 @@
+html, body {
+    margin: 0px;
+    padding: 0px;
+}
+.center {
+    width: 1100px;
+    margin: 0px auto;
+    position: relative;
+}
+.header .text {
+    height: 80px;
+    width: 100%;
+    line-height: 80px;
+    color: #48694d;
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    font-family: Tahoma;
+    font-size: 26px;
+}
+.header {
+    margin-bottom: 40px;
+}
+.content {
+    width: 100%;
+    margin-bottom: 190px;
+}
+.scheduler {
+    width: 1100px;
+    height: 494px;
+    margin: 0 auto;
+    background-color: #ffffff;
+}
+.footer {
+    height: 142px;
+    width: 100%;
+    background-color: #67846C;
+    background-repeat: repeat-x;
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+}
+.user-info {
+    position: absolute;
+    right: 10px;
+    top: 37px;
+    z-index: 10;
+    color: #ffffff;
+    font-family: Helvetica;
+}
+.user-info div {
+    float: right;
+    margin-left: 10px;
+}
+.user-info .username {
+    font-size: 14px;
+}
+.user-info div,
+.user-info a,
+.user-info a:hover {
+    font-size: 14px;
+    font-family: Helvetica;
+    color: #48694D;
+}
+.user-info .bold {
+    font-weight: bold;
+}
+.logout {
+    line-height: 13px;
+}
+.logout a,
+.logout a:hover,
+.logout a:visited {
+    color: #ABD95D;
+}
+
+.clear {
+    clear: both;
+}
+.login-form {
+    display: block;
+    padding: 20px;
+    background-color: #e9e9e9;
+    border: 1px solid #cecece;
+    border-radius: 10px;
+    width: 400px;
+    height: 244px;
+    margin: 0px auto;
+}
+.login-form input,
+.login-form label {
+    height: 34px;
+    border: 1px solid #CECECE;
+    font-size: 20px;
+    font-family: Arial;
+    padding: 5px 12px;
+    margin-bottom: 10px;
+    display: block;
+    float: left;
+}
+.login-form input {
+    width: 254px;
+}
+.login-form input[type="submit"] {
+    height: 42px;
+    width: 280px;
+    cursor: pointer;
+    background-color: #48694d;
+    color: #ffffff;
+}
+.login-form input[type="submit"]:hover {
+
+}
+.login-form label {
+    width:92px;
+    line-height: 34px;
+    border: none;
+}
+
+.leftcol {
+    float: left;
+    width: 250px;
+    height: 100%;
+}
+.rightcol {
+    float: left;
+    width: 840px;
+    height: 100%;
+    margin-left: 5px;
+}
+
+.filter {
+    background-color: #FFF;
+    border: 1px solid #CECECE;
+    margin-top: 5px;
+    font-size: 12px;
+    font-family: Arial;
+    border-bottom: none;
+}
+.filter .f_header {
+    text-align: center;
+    line-height: 32px;
+}
+.filter table {
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    border-collapse: collapse;
+}
+.minical .dhx_cal_container.dhx_mini_calendar {
+    box-shadow: none;
+}
+.filter table tr td {
+    margin: 0px;
+    height: 16px;
+    line-height: 16px;
+    border: 1px solid #CECECE;
+}
+.filter table tr.odd td {
+    background-color: #F0EDE7;
+}
+.filter table tr td.checkbox {
+    width: 22px;
+    padding: 4px;
+    border-left: none;
+}
+.filter table tr td.last {
+    border-right: none;
+}
+.filter table tr td label {
+    width: 100%;
+    height: 100%;
+    display: block;
+    line-height: 26px;
+    cursor: pointer;
+    padding: 0px 6px;
+}
+.right {
+    text-align: right;
+    margin-bottom: 10px;
+    margin-right: 7px;
+}
+
+.dhx_cal_date {
+    padding-left: 80px;
+}
+
+.dhx_cal_container {
+    border: 1px solid #CECECE;
+}
+
+
+/********************************************************************************/
+/*                               NOUVEAUX STYLE                                 */
+/********************************************************************************/
+
+body{
+    background-image: url("imgs/japanese-pattern-1.png");
+    font-family: Arial !important;
+}
+
+@font-face {
+    font-family:"c&a";
+    src: url("./fonts/c_a.ttf");
+}
+
+
+
+
+
+.title{
+    font-family:"c&a" !important;
+    color:black !important;
+    font-size: 50px !important;
+    text-transform: uppercase !important;
+    margin-top:5px !important;
+    background-color: rgba(255,255,255,0.6) !important;
+    padding-top:20px;
+    padding-bottom: 20px;
+    text-align: center !important;
+    color:black !important;
+}
+
+
+input[type=submit]{
+    width:100% !important;
+    background-color: #63a5c8 !important;
+    border: 1px solid #CECECE;
+    font-size: 20px;
+    font-family: Arial;
+    padding: 5px 12px;
+    margin-bottom: 10px;
+    display: block;
+    float: left;
+    text-transform: uppercase !important;
+    color:white !important;
+}
+
+input[type=text]{
+    height: 34px;
+    border: 1px solid #CECECE;
+    font-size: 20px;
+    font-family: Arial;
+    padding: 5px 12px;
+    margin-bottom: 10px;
+    display: block;
+    float: left;
+    color:white;
+    padding: 9px !important;
+    color:black !important;
+}
+label{
+    font-weight: bold;
+}
+table{
+    width:100% !important;
+}
+
+
+/*********************************************************/
+/*                          LOGIN                        */
+/*********************************************************/
+
+
+
+/*********************************************************/
+/*                       REGISTER                        */
+/*********************************************************/
+.container-register{
+    display: block;
+    padding: 20px;
+    background-color: #e9e9e9;
+    border: 1px solid #cecece;
+    border-radius: 10px;
+    width: 400px;
+    height: 244px;
+    margin: 30px auto;
+}
+
+/*********************************************************/
+/*                       PLANNER                        */
+/*********************************************************/
+.title .text{
+    color:black !important;
+}
+
+.dhx_now .dhx_month_head, .dhx_now .dhx_month_body{
+    background-color: #9fcfe9 !important;
+}
+.user-info .username{
+    color:black !important;
+}
+.user-info .logout{
+    color:black !important;
+}
+    .user-info .logout a{
+        color:#12425c !important;
+    }
+        .user-info .logout a:hover{
+            color:#2b759c !important;
+        }
+.dhx_cal_tab.active{
+    background-color: #9fcfe9 !important;
+}
+.filter table tr.odd td{
+    background-color: #b7e6ff !important;
+}

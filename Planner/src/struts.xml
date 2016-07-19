@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+    <constant name="struts.devMode" value="true" />
+    <constant name="struts.action.excludePattern" value=".*/static/.*" />
+    <package name="test" extends="struts-default">
+
+        <action name="index" class="org.apache.struts.demoapp_struts.action.JobDemoAction" method="javaplanner">
+            <result name="success">/article.jsp</result>
+            <result name="error" type="redirectAction">login.action</result>
+        </action>
+        <action name="events" class="org.apache.struts.demoapp_struts.action.JobDemoAction" method="events">
+            <result name="success">/data.jsp</result>
+        </action>
+
+        <action name="" class="org.apache.struts.demoapp_struts.action.JobDemoAction" method="javaplanner">
+            <result name="success">/article.jsp</result>
+            <result name="error" type="redirectAction">login.action</result>
+        </action>
+        <action name="events" class="org.apache.struts.demoapp_struts.action.JobDemoAction" method="events">
+            <result name="success">/data.jsp</result>
+        </action>
+
+        <action name="login" class="org.apache.struts.demoapp_struts.action.JobDemoAction" method="login">
+            <result name="success">/login.jsp</result>
+            <result name="login" type="redirectAction">index.action</result>
+            <result name="error">login.jsp</result>
+        </action>
+
+        <action name="logout" class="org.apache.struts.demoapp_struts.action.JobDemoAction" method="logout">
+            <result name="success" type="redirectAction">index.action</result>
+        </action>
+
+        <action name="register" class="org.apache.struts.demoapp_struts.model.User">
+            <result name="success" type="redirectAction">index.action</result>
+        </action>
+
+    </package>
+</struts>
