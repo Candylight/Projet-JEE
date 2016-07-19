@@ -1,10 +1,7 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="s" uri="/struts-tags" %>
+<!DOCTYPE html>
 <html>
 <head>
-    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="./codebase/style.css" " />
+    <title>Planning personnel</title>
 </head>
-<body>
-
-</body>
-</html>
-
