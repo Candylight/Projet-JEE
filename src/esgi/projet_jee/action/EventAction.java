@@ -5,6 +5,13 @@ import java.util.List;
 
 import com.opensymphony.xwork2.ActionSupport;
 import esgi.projet_jee.model.User;
+import org.apache.struts2.ServletActionContext;
+import org.hibernate.Session;
+import esgi.projet_jee.util.HibernateUtil;
+import org.hibernate.criterion.Restrictions;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 public class EventAction extends ActionSupport {
     private static final long serialVersionUID = 1L;
@@ -38,9 +45,36 @@ public class EventAction extends ActionSupport {
         return SUCCESS;
     }
     public String login() throws Exception {
-        return SUCCESS;
+        HttpServletRequest request = ServletActionContext.getRequest();
+        HttpSession session = request.getSession(true);
+        if (session.getAttribute("email") != null)
+            return LOGIN;
+
+        String email = request.getParameter("email");
+        String password = request.getParameter("password");
+        if (email == null || password == null)
+            return SUCCESS;
+
+        Session s = HibernateUtil.getSessionFactory().openSession();
+        List<User> users = s.createCriteria(User.class)
+                .add(Restrictions.eq("email", email))
+                .add(Restrictions.eq("password", password))
+                .list();
+
+        if (users.size() == 0)
+            return ERROR;
+
+        session.setAttribute("id", users.get(0).getId());
+        session.setAttribute("email", users.get(0).getEmail());
+        session.setAttribute("name", users.get(0).getName());
+        return LOGIN;
     }
     public String logout() throws Exception {
+        HttpServletRequest request = ServletActionContext.getRequest();
+        HttpSession session = request.getSession(true);
+        session.removeAttribute("id");
+        session.removeAttribute("email");
+        session.removeAttribute("name");
         return SUCCESS;
     }
 }
