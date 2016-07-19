@@ -9,6 +9,32 @@
     <constant name="struts.action.excludePattern" value=".*/static/.*" />
     <package name="test" extends="struts-default">
 
+        <action name="index" class="esgi.projet_jee.action.EventAction" method="javaplanner">
+            <result name="success">/article.jsp</result>
+            <result name="error" type="redirectAction">login.action</result>
+        </action>
+        <action name="events" class="esgi.projet_jee.action.EventAction" method="events">
+            <result name="success">/data.jsp</result>
+        </action>
+
+        <action name="" class="esgi.projet_jee.action.EventAction" method="javaplanner">
+            <result name="success">/article.jsp</result>
+            <result name="error" type="redirectAction">login.action</result>
+        </action>
+        <action name="events" class="esgi.projet_jee.action.EventAction" method="events">
+            <result name="success">/data.jsp</result>
+        </action>
+
+        <action name="login" class="esgi.projet_jee.action.EventAction" method="login">
+            <result name="success">/login.jsp</result>
+            <result name="login" type="redirectAction">index.action</result>
+            <result name="error">login.jsp</result>
+        </action>
+
+        <action name="logout" class="esgi.projet_jee.action.EventAction" method="logout">
+            <result name="success" type="redirectAction">index.action</result>
+        </action>
+
         <action name="register" class="esgi.projet_jee.model.User">
             <result name="success" type="redirectAction">index.action</result>
         </action>
