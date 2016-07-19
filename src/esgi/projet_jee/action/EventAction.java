@@ -6,6 +6,7 @@ import java.util.List;
 import com.dhtmlx.planner.DHXPlanner;
 import com.dhtmlx.planner.DHXSkin;
 import com.dhtmlx.planner.controls.DHXLightboxSelect;
+import com.dhtmlx.planner.controls.DHXLocalization;
 import com.dhtmlx.planner.controls.DHXMiniCalendar;
 import com.dhtmlx.planner.controls.DHXUnitsView;
 import com.dhtmlx.planner.data.DHXDataFormat;
@@ -53,6 +54,7 @@ public class EventAction extends ActionSupport {
         }
 
         DHXPlanner planner = new DHXPlanner("./codebase/", DHXSkin.TERRACE);
+        planner.localizations.set(DHXLocalization.French, true);
         planner.setInitialDate(2013, 7, 15);
         planner.setInitialView("units");
         planner.config.setScrollHour(8);
@@ -66,14 +68,14 @@ public class EventAction extends ActionSupport {
         planner.extensions.add(DHXExtension.TOOLTIP);
 
         // create units view
-        DHXUnitsView units = new DHXUnitsView("units", "user", "Units");
+        DHXUnitsView units = new DHXUnitsView("units", "user", "Utilisateurs");
         units.setServerListLink("users");
         units.setSkipIncorrect(true);
         planner.views.add(units);
 
 
         // adds sections in lightbox
-        DHXLightboxSelect sel = new DHXLightboxSelect("user", "Owner");
+        DHXLightboxSelect sel = new DHXLightboxSelect("user", "Propriétaire");
         sel.setServerList("users");
         planner.lightbox.add(sel);
 

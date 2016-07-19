@@ -30,7 +30,7 @@
             </div>
             <div class="filter" id="filter">
                 <div class="f_header">
-                    Users
+                    Utilisateurs
                 </div>
                 <div class="f_list">
                     <table id="users">
