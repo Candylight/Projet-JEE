@@ -5,4 +5,13 @@
         "http://struts.apache.org/dtds/struts-2.3.dtd">
 
 <struts>
+    <constant name="struts.devMode" value="true" />
+    <constant name="struts.action.excludePattern" value=".*/static/.*" />
+    <package name="test" extends="struts-default">
+
+        <action name="register" class="esgi.projet_jee.model.User">
+            <result name="success" type="redirectAction">index.action</result>
+        </action>
+
+    </package>
 </struts>

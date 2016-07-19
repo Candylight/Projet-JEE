@@ -39,4 +39,9 @@ public class User {
     public void setPassword(String password) {
         this.password = password;
     }
+
+    public String registerUser(){
+        RegisterDao.saveUser(this);
+        return "success";
+    }
 }
